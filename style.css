@@ -67,7 +67,7 @@ body {
     background-position: center; 
     background-repeat: no-repeat; 
     background-attachment: fixed;
-    height: 600px;
+    height: 92vh;
     display: flex; 
     flex-direction: column;
     justify-content: center; 
@@ -249,12 +249,16 @@ body {
   margin-bottom: 15px;
   transition: background-color 0.3s ease;
 }
-.winter-services button{
+
+
+
+.winter-services a button{
+  text-decoration: none;
+  color: rgb(87, 87, 87);
   padding: 10px 20px;
   font-size: 1rem;
   border: none;
   background-color: white;
-  color: rgb(87, 87, 87);
   border-radius: 5px;
   box-shadow: 0px 0px 3px black;
   cursor: pointer;
@@ -262,7 +266,6 @@ body {
   margin-bottom: 15px;
   transition: background-color 0.3s ease;
 }
-
 .spring-service button:hover{
   background-color: #2d8e37;
 }
@@ -270,6 +273,82 @@ body {
   background-color: rgb(156, 156, 156);
   color:white
 }
+
+
+.footer{
+  background: rgb(49, 49, 49);
+  color: white;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(200px, 1fr)) ;
+    justify-content: center;
+    padding: 50px 50px 10px 50px;
+    gap: 20px;
+    font-family: lato;
+}
+.footer p,a {
+  color: rgb(165, 165, 165);
+}
+#email-footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#email-footer button{
+  border-style: none;
+  background-color: orangered;
+  position: relative;
+  left: -30px;
+  border-radius: 5%;
+}
+.section-info-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+.section-info-footer h2,h3{
+padding-bottom: 20px;
+}
+#email-footer input{
+  height: 48px;
+  width: 100%;
+  border-radius: 3%;
+  border: white;
+}
+.contact-info{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  
+}
+.footer hr{
+ background: none;
+ grid-column: 1 / -1;
+}
+
+#social-media{
+  grid-column: 2 / 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+}
+#social-media a{
+display: flex;
+border-radius: 100%;
+border: solid 1px rgb(165, 165, 165);
+
+padding: 10px;
+}
+#legal{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
 
 /*Animacion de apareción*/
 @keyframes show{
@@ -282,14 +361,14 @@ body {
     scale: 100%;
   }
 }
-.informative-text,.spring-service,.winter-services{
+.informative-text,.spring-service,.winter-services,.below-main-information{
   view-timeline-name: --aparecer ;
   view-timeline-axis: block;
 
   animation-timeline: --aparecer;
   animation-name: show;
 
-  animation-range: entry 25% cover 25%;
+  animation-range: entry 25% cover 50%;
   animation-fill-mode: both;
 }
 
@@ -297,6 +376,9 @@ body {
   .text-content {
     padding-left: 50px;
     width: auto; 
+  }
+  .nav-bottom{
+    height: 94vh;
   }
 
   .image-content img {
@@ -342,7 +424,7 @@ body {
     animation-timeline: --aparecer;
     animation-name: show;
   
-    animation-range: entry 25% cover 25%;
+    animation-range: entry 25% cover 40%;
     animation-fill-mode: both;
   }
 }
@@ -434,6 +516,35 @@ body {
     padding: 8px 15px;
   }
 
+  .footer{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 1fr ;
+  }
+  .footer hr{
+    background: none;
+    grid-column: 1 / -1;
+   }
+   
+   #social-media{
+     grid-column: 1 / -1;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 20px;
+   
+   }
+   .section-info-footer{
+     justify-content: start;  
+     align-items: center;
+   }
+   .section-info-footer h2,h3{
+    padding-bottom: 20px;
+    text-align: center;
+    }
+
   .spring-service,.winter-services,.informative-text,.image-content{
     view-timeline-name: --aparecer ;
     view-timeline-axis: block;
@@ -441,7 +552,7 @@ body {
     animation-timeline: --aparecer;
     animation-name: show;
   
-    animation-range: entry 25% cover 25%;
+    animation-range: entry 25% cover 50%;
     animation-fill-mode: both;
   }
 }
@@ -481,7 +592,7 @@ body {
   }
   
   .nav-bottom {
-    height: auto;
+    height:90vh;
     text-align: center;
     padding: 15px; 
   }
@@ -491,7 +602,7 @@ body {
   }
 
   .nav-bottom button {
-    font-size: 0.8rem; 
+    font-size: 1.3rem; 
     padding: 10px;
   }
 
@@ -538,14 +649,14 @@ body {
     height: 400px;
   }
 
-  .spring-service,.winter-services{
+  .below-main-information,.spring-service,.winter-services{
     view-timeline-name: --aparecer ;
     view-timeline-axis: block;
   
     animation-timeline: --aparecer;
     animation-name: show;
   
-    animation-range: entry 25% cover 25%;
+    animation-range: entry 25% cover 30%;
     animation-fill-mode: both;
   }
 

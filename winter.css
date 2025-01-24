@@ -25,14 +25,14 @@ body {
 }
 #image-cover {
   background-image: url("images_webp/mountain_snow4.webp");
-  background-size: cover; 
+  background-size: cover;  
   background-position: center; 
   background-repeat: no-repeat; 
   background-attachment: fixed;
-  height: 90vh;
+  height: 92vh;
   display: flex; 
   flex-direction: column;
-  justify-content: start; 
+  justify-content: center; 
   align-items: center; 
   text-align: center; 
   color: white; 
@@ -96,10 +96,15 @@ p {
 
   
 }
-.div-winter{
-  animation: reveal linear both;
-  animation-timeline: view();
-  animation-range: entry 25% cover 25%;
+.container-winter-jobs{
+  view-timeline-name: --aparecer ;
+  view-timeline-axis: block;
+
+  animation-timeline: --aparecer;
+  animation-name: reveal;
+
+  animation-range: entry 25% cover 45%;
+  animation-fill-mode: both;
 }
 .container-winter-jobs {
   padding: 20px;
@@ -196,7 +201,7 @@ hr {
     gap: 20px;
     font-family: lato;
 }
-.footer a,p{
+.footer p,a{
   color: rgb(165, 165, 165);
 }
 #email-footer{
@@ -261,13 +266,13 @@ padding: 10px;
 }
 
 @keyframes reveal {
-  0% {
+ from{
     opacity: 0;
-    translate: 0 100px;
-  }
-  100% {
+    scale: 25%;
+ }
+   to{
     opacity: 1;
-    translate: 0 0px;
+    scale: 100%;
   }
   
 }
@@ -369,7 +374,7 @@ padding: 10px;
 
 
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
   @keyframes fall {
     0% {
         transform: translateX(0) translateY(-10vh) rotate(0deg);
@@ -384,7 +389,7 @@ padding: 10px;
   }
   #image-cover {
     padding: 50px 40px 0px 40px;
-    height: 50vh;
+    height: 90vh;
   }
  
 
@@ -440,6 +445,17 @@ padding: 10px;
 }
 .img-card{
   left: 20px;
+}
+
+.container-winter-jobs{
+  view-timeline-name: --aparecer ;
+  view-timeline-axis: block;
+
+  animation-timeline: --aparecer;
+  animation-name: reveal;
+
+  animation-range: entry 25% cover 15%;
+  animation-fill-mode: both;
 }
 
 }
