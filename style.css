@@ -66,12 +66,8 @@ body {
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
-<<<<<<< HEAD
-    height: 850px;
-=======
     background-attachment: fixed;
-    height: 600px;
->>>>>>> e9b0ac1b163190b711f6b4ffd276d7fc21a7aa87
+    height: 92vh;
     display: flex; 
     flex-direction: column;
     justify-content: center; 
@@ -381,6 +377,9 @@ padding: 10px;
     padding-left: 50px;
     width: auto; 
   }
+  .nav-bottom{
+    height: 94vh;
+  }
 
   .image-content img {
     width: 80%; 
@@ -593,7 +592,7 @@ padding: 10px;
   }
   
   .nav-bottom {
-    height: auto;
+    height:90vh;
     text-align: center;
     padding: 15px; 
   }
@@ -603,7 +602,7 @@ padding: 10px;
   }
 
   .nav-bottom button {
-    font-size: 0.8rem; 
+    font-size: 1.3rem; 
     padding: 10px;
   }
 
@@ -650,14 +649,14 @@ padding: 10px;
     height: 400px;
   }
 
-  .spring-service,.winter-services{
+  .below-main-information,.spring-service,.winter-services{
     view-timeline-name: --aparecer ;
     view-timeline-axis: block;
   
     animation-timeline: --aparecer;
     animation-name: show;
   
-    animation-range: entry 25% cover 50%;
+    animation-range: entry 25% cover 30%;
     animation-fill-mode: both;
   }
 
