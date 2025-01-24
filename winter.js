@@ -7,7 +7,7 @@ function createSnowflake() {
     snowflake.setAttribute("height", "20");
     snowflake.setAttribute("viewBox", "0 0 24 24");
 
-    snowflake.style.left = Math.random() * 100 + "vw";
+    snowflake.style.left = Math.random() * 90 + "vw";
     snowflake.style.animationDuration = Math.random() * 5 + 5 + "s"; 
     snowflake.style.animationDelay = Math.random() * 5 + "s"; 
 
