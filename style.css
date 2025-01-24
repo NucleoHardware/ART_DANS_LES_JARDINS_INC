@@ -1,4 +1,4 @@
-/* General Styles */
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -92,7 +92,7 @@ body {
   
   .nav-bottom button {
     margin-top: 20px;
-    padding: 15px;
+    padding: 10px;
     border-radius: 10px;
     font-size: 1.2rem;
     border: solid 2px white;
@@ -105,9 +105,9 @@ body {
   }
   
   .nav-bottom button:hover {
-    background-color: greenyellow;
-    border:solid 2px greenyellow;
-    color:black
+    background-color: rgb(0, 166, 0);
+    border:solid 2px white;
+    color:white;
   }
   
   .below-main-information {
@@ -123,18 +123,18 @@ body {
     flex-direction: column;
     justify-content: center;
     width: 800px;
-    padding-top: 150px;
+    padding-top: 90px;
     padding-left: 300px;
 }
 
 .text-content h1 {
-    font-size: 2rem;
+    font-size: 2.9rem;
     font-weight: bold;
     margin-bottom: 15px;
 }
 
 .text-content p {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     line-height: 1.5;
     color: #555;
 }
@@ -169,6 +169,128 @@ body {
     margin-top: 40px; 
 }
 
+.services {
+  padding: 50px;
+  background-color: white; 
+}
+
+.informative-text {
+  text-align: center; 
+  margin-bottom: 30px;
+}
+
+.informative-text h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.informative-text p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.services-content {
+  display: flex;
+  justify-content: space-evenly; 
+  gap: 20px; 
+}
+
+.spring-service,
+.winter-services {
+  max-width: 600px;
+  flex: 1;  
+  text-align: center;
+  box-shadow: 0 0px 8px rgba(0, 0, 0, 0.612);
+}
+.spring-service{
+  background-color: #bcffc8;
+}
+.winter-services{
+  background-color: white;
+}
+
+.spring-service h3,
+.winter-services h3 {
+  margin-top: 15px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: black;
+}
+
+.spring-service p,
+.winter-services p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.spring-service img,
+.winter-services img {
+  width: 100%;
+  height: 500px;
+  margin-bottom: 15px;
+ 
+}
+
+.spring-service button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  background-color: #3bb54a;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 15px;
+  transition: background-color 0.3s ease;
+}
+.winter-services button{
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  background-color: white;
+  color: rgb(87, 87, 87);
+  border-radius: 5px;
+  box-shadow: 0px 0px 3px black;
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.spring-service button:hover{
+  background-color: #2d8e37;
+}
+.winter-services button:hover {
+  background-color: rgb(156, 156, 156);
+  color:white
+}
+
+/*Animacion de apareción*/
+@keyframes show{
+  from{
+    opacity: 0;
+    scale: 25%;
+  }
+  to{
+    opacity: 1;
+    scale: 100%;
+  }
+}
+.informative-text,.spring-service,.winter-services{
+  view-timeline-name: --aparecer ;
+  view-timeline-axis: block;
+
+  animation-timeline: --aparecer;
+  animation-name: show;
+
+  animation-range: entry 25% cover 25%;
+  animation-fill-mode: both;
+}
 
 @media (max-width: 1024px) {
   .text-content {
@@ -187,7 +309,43 @@ body {
     transform: translate(-50%, 0);
     width: 80%;
   }
+  .services-content {
+    flex-direction: column;
+    gap: 30px; 
+    align-items: center;
+  }
+
+  .spring-service,
+  .winter-services {
+    width: 600px;
+  }
+
+  .spring-service h3,
+  .winter-services h3 {
+    font-size: 1.4rem; 
+  }
+
+  .spring-service p,
+  .winter-services p {
+    font-size: 1rem;
+  }
+  .services-content img{
+    width: 600px;
+  }
+
+  /*Animacion*/
+  .spring-service,.winter-services,.informative-text{
+    view-timeline-name: --aparecer ;
+    view-timeline-axis: block;
+  
+    animation-timeline: --aparecer;
+    animation-name: show;
+  
+    animation-range: entry 25% cover 25%;
+    animation-fill-mode: both;
+  }
 }
+
 
 @media (max-width: 850px) {
   .abrir-menu,
@@ -252,6 +410,39 @@ body {
     font-size: 1.2rem;
     text-align: center;
   }
+  .services {
+    padding: 20px; 
+  }
+
+  .informative-text h1 {
+    font-size: 1.8rem; 
+  }
+
+  .informative-text p {
+    font-size: 1rem;
+  }
+
+  .spring-service img,
+  .winter-services img {
+    height: 500px;
+  }
+
+  .spring-service button,
+  .winter-services button {
+    font-size: 0.9rem; 
+    padding: 8px 15px;
+  }
+
+  .spring-service,.winter-services,.informative-text,.image-content{
+    view-timeline-name: --aparecer ;
+    view-timeline-axis: block;
+  
+    animation-timeline: --aparecer;
+    animation-name: show;
+  
+    animation-range: entry 25% cover 25%;
+    animation-fill-mode: both;
+  }
 }
 
 @media screen and (max-width: 550px) {
@@ -312,7 +503,49 @@ body {
   }
 
   .image-content img {
-    width: 90%; 
-    height: auto;
+    width: 100%; 
+    height: 350px;
   }
+  .services {
+    padding: 10px; 
+  }
+
+  .informative-text h1 {
+    font-size: 1.5rem; 
+  }
+
+  .informative-text p {
+    font-size: 0.9rem;
+  }
+  
+
+  .spring-service p,
+  .winter-services p {
+    font-size: 0.9rem; 
+  }
+  .spring-service,.winter-services{
+    max-width: 380px;
+    
+  }
+  .spring-service button,
+  .winter-services button {
+    font-size: 0.8rem; 
+    padding: 6px 12px;
+  }
+  .services-content img{
+    width: 100%;
+    height: 400px;
+  }
+
+  .spring-service,.winter-services{
+    view-timeline-name: --aparecer ;
+    view-timeline-axis: block;
+  
+    animation-timeline: --aparecer;
+    animation-name: show;
+  
+    animation-range: entry 25% cover 25%;
+    animation-fill-mode: both;
+  }
+
 }
