@@ -1,0 +1,462 @@
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  padding-top: 0px;
+}
+  .below-main-information {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px;
+    align-items: start;
+    padding: 40px;
+}
+
+.text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 800px;
+    padding-top: 90px;
+    padding-left: 300px;
+}
+
+.text-content h1 {
+    font-size: 2.9rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.text-content p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #555;
+}
+
+.image-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.guaranteed {
+    background-color: #3bb54a;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: center;
+    position: absolute;
+    top: 450px;
+    left: 350px;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    z-index: 1;
+}
+
+.image-content img {
+    width:500px;
+    height: 500px;
+    border-radius: 10px;
+    margin-top: 40px; 
+}
+
+.services {
+  padding: 50px;
+  background-color: white; 
+}
+
+.informative-text {
+  text-align: center; 
+  margin-bottom: 30px;
+}
+
+.informative-text h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.informative-text p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.services-content {
+  display: flex;
+  justify-content: space-evenly; 
+  gap: 20px; 
+}
+
+.spring-service,
+.winter-services {
+  max-width: 600px;
+  flex: 1;  
+  text-align: center;
+  box-shadow: 0 0px 8px rgba(0, 0, 0, 0.612);
+}
+.spring-service{
+  background-color: #bcffc8;
+}
+.winter-services{
+  background-color: white;
+}
+
+.spring-service h3,
+.winter-services h3 {
+  margin-top: 15px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: black;
+}
+
+.spring-service p,
+.winter-services p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.spring-service img,
+.winter-services img {
+  width: 100%;
+  height: 500px;
+  margin-bottom: 15px;
+ 
+}
+
+.spring-service button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  background-color: #3bb54a;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 15px;
+  transition: background-color 0.3s ease;
+}
+.winter-services button{
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  background-color: white;
+  color: rgb(87, 87, 87);
+  border-radius: 5px;
+  box-shadow: 0px 0px 3px black;
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.spring-service button:hover{
+  background-color: #2d8e37;
+}
+.winter-services button:hover {
+  background-color: rgb(156, 156, 156);
+  color:white
+}
+
+/*Animacion de apareción*/
+@keyframes show{
+  from{
+    opacity: 0;
+    scale: 25%;
+  }
+  to{
+    opacity: 1;
+    scale: 100%;
+  }
+}
+.informative-text,.spring-service,.winter-services{
+  view-timeline-name: --aparecer ;
+  view-timeline-axis: block;
+
+  animation-timeline: --aparecer;
+  animation-name: show;
+
+  animation-range: entry 25% cover 25%;
+  animation-fill-mode: both;
+}
+
+@media (max-width: 1024px) {
+  .text-content {
+    padding-left: 50px;
+    width: auto; 
+  }
+
+  .image-content img {
+    width: 80%; 
+    height: auto;
+  }
+
+  .guaranteed {
+    top: 350px; 
+    left: 40%; 
+    transform: translate(-50%, 0);
+    width: 80%;
+  }
+  .services-content {
+    flex-direction: column;
+    gap: 30px; 
+    align-items: center;
+  }
+
+  .spring-service,
+  .winter-services {
+    width: 600px;
+  }
+
+  .spring-service h3,
+  .winter-services h3 {
+    font-size: 1.4rem; 
+  }
+
+  .spring-service p,
+  .winter-services p {
+    font-size: 1rem;
+  }
+  .services-content img{
+    width: 600px;
+  }
+
+  /*Animacion*/
+  .spring-service,.winter-services,.informative-text{
+    view-timeline-name: --aparecer ;
+    view-timeline-axis: block;
+  
+    animation-timeline: --aparecer;
+    animation-name: show;
+  
+    animation-range: entry 25% cover 25%;
+    animation-fill-mode: both;
+  }
+}
+
+
+@media (max-width: 850px) {
+  .abrir-menu,
+  .cerrar-menu{
+    display: block;
+    
+    font-size: 1.2rem;
+  }
+  .nav{
+    opacity: 0;
+    visibility: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 1rem;
+    position: absolute;
+    top: 0;
+    right:0;
+    padding:1.5rem;
+    background-color:#e7e8e7f1;
+    box-shadow: 0 0 0 100vmax rgba(0,0,0,.5);
+    height: 1000vw;
+  }
+
+  .nav.visible{
+    opacity: 1;
+    visibility: visible;
+  }
+  .nav-list{
+    flex-direction: column;
+    align-items: end;
+  }
+  .below-main-information {
+    grid-template-columns: 1fr; 
+    gap: 40px; 
+    padding: 20px; 
+  }
+
+  .text-content {
+    padding-left: 0; 
+    padding-top: 20px;
+    text-align: center;
+  }
+
+  .image-content {
+    position: static;
+    margin-top: 20px;
+    align-items: center; 
+  }
+
+  .image-content img {
+    width: 100%; 
+    height: 700px; 
+  }
+
+  .guaranteed {
+    position: static;
+    transform: none; 
+    margin-top: 20px;
+    width: 100%;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  .services {
+    padding: 20px; 
+  }
+
+  .informative-text h1 {
+    font-size: 1.8rem; 
+  }
+
+  .informative-text p {
+    font-size: 1rem;
+  }
+
+  .spring-service img,
+  .winter-services img {
+    height: 500px;
+  }
+
+  .spring-service button,
+  .winter-services button {
+    font-size: 0.9rem; 
+    padding: 8px 15px;
+  }
+
+  .spring-service,.winter-services,.informative-text,.image-content{
+    view-timeline-name: --aparecer ;
+    view-timeline-axis: block;
+  
+    animation-timeline: --aparecer;
+    animation-name: show;
+  
+    animation-range: entry 25% cover 25%;
+    animation-fill-mode: both;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .abrir-menu,
+  .cerrar-menu{
+    display: block;
+    font-size: 1.2rem;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  .nav{
+    opacity: 0;
+    visibility: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 1rem;
+    position: absolute;
+    top: 0;
+    right:0;
+    padding:1.5rem;
+    background-color:#e7e8e7f1;
+    box-shadow: 0 0 0 100vmax rgba(0,0,0,.5);
+    height: 1000vw;
+  }
+
+  .nav.visible{
+    opacity: 1;
+    visibility: visible;
+  }
+  .nav-list{
+    flex-direction: column;
+    align-items: end;
+  }
+  
+  .nav-bottom {
+    height: auto;
+    text-align: center;
+    padding: 15px; 
+  }
+
+  .nav-bottom p {
+    font-size: 0.9rem; 
+  }
+
+  .nav-bottom button {
+    font-size: 0.8rem; 
+    padding: 10px;
+  }
+
+  .text-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .text-content p {
+    font-size: 1rem;
+  }
+
+  .image-content img {
+    width: 100%; 
+    height: 350px;
+  }
+  .services {
+    padding: 10px; 
+  }
+
+  .informative-text h1 {
+    font-size: 1.5rem; 
+  }
+
+  .informative-text p {
+    font-size: 0.9rem;
+  }
+  
+
+  .spring-service p,
+  .winter-services p {
+    font-size: 0.9rem; 
+  }
+  .spring-service,.winter-services{
+    max-width: 380px;
+    
+  }
+  .spring-service button,
+  .winter-services button {
+    font-size: 0.8rem; 
+    padding: 6px 12px;
+  }
+  .services-content img{
+    width: 100%;
+    height: 400px;
+  }
+
+  .spring-service,.winter-services{
+    view-timeline-name: --aparecer ;
+    view-timeline-axis: block;
+  
+    animation-timeline: --aparecer;
+    animation-name: show;
+  
+    animation-range: entry 25% cover 25%;
+    animation-fill-mode: both;
+  }
+
+}
+
+.contacto-servicio{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+  padding-bottom: 20px;
+}
+
+.c-1{
+	padding-top: 20px;
+	font-size: 48px;
+	font-family: 'Lato', sans-serif;
+	display: flex;
+	text-align: center;
+	color: #1a1a1a;
+}

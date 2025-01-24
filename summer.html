@@ -4,15 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css"/>
     <link rel="stylesheet" href="summer.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
-      rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+    rel="stylesheet"
     />
 </head>
 <body>
+    <header class="navbar">
+        <div class="logo">
+          <img src="img/logo.png" alt="logo" width="" height="50" />
+        </div>
+        <button class="abrir-menu" id="abrir"><i class="bi bi-list"></i></button>
+        <nav class="nav" id="nav">
+          <button class="cerrar-menu" id="cerrar"><i class="bi bi-x"></i></button>
+          <ul class="nav-list">
+            <li><a href="/index.html">Inicio</a></li>
+            <li><a href="/summer.html" id="inicio">Trabajos de Verano</a></li>
+            <li><a href="/winter.html">Trabajos de Invierno</a></li>
+            <li><a href="/contact.html">Contáctanos</a></li>
+          </ul>
+        </nav>
+      </header>
     <section class="section-summer-jobs">
         <h2 class="text-center">Trabajos de Jardinería</h2>
         <p class="text-center"class="text-center">Explora nuestra galería de jardinería en verano</p>
