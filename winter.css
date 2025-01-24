@@ -192,7 +192,7 @@ hr {
     gap: 20px;
     font-family: lato;
 }
-.footer a,p{
+.footer p,a{
   color: rgb(165, 165, 165);
 }
 #email-footer{
