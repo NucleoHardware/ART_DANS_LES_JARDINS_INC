@@ -35,7 +35,7 @@ body {
   justify-content: center; 
   align-items: center; 
   text-align: center; 
-  color: white; 
+  color: white !important; 
   padding: 100px;
   box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
 }
@@ -73,20 +73,18 @@ body {
 h1 {
   font-size: 40px;
   font-family: lato;
-  color: #000;
   font-weight: 600;
   margin-bottom: 20px;
 }
 h2 {
   font-size: 20px;
   font-family: lato;
-  color: #000;
+ 
   font-weight: 600;
   margin-bottom: 20px;
 }
 p {
   font-family: lato;
-  color: #000;
   font-weight: 400;
   margin-bottom: 20px;
 }
@@ -277,8 +275,13 @@ padding: 10px;
   
 }
 
+@media screen and (max-width:1024px){
+  #image-cover{
+    height: 95vh;
+  }
+}
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 850px) {
   @keyframes fall {
     0% {
         transform: translateX(0) translateY(-10vh) rotate(0deg);
@@ -293,7 +296,7 @@ padding: 10px;
   }
   #image-cover {
     padding: 100px 40px 0px 40px;
-    height: 60vh;
+    height: 95vh;
   }
   #text-nav-bottom-snow {
     font-size: 2.3rem;
@@ -301,7 +304,7 @@ padding: 10px;
   }
   #text-bottom-snow	{
     padding: 0px 0px 10px 0px;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
   .container-winter-jobs {
     grid-template-columns: 1fr;
@@ -369,6 +372,18 @@ padding: 10px;
   padding-bottom: 20px;
   text-align: center;
   }
+
+
+  .container-winter-jobs{
+    view-timeline-name: --aparecer ;
+    view-timeline-axis: block;
+  
+    animation-timeline: --aparecer;
+    animation-name: reveal;
+  
+    animation-range: entry 25% cover 15%;
+    animation-fill-mode: both;
+  }
   
 }
 
@@ -394,12 +409,12 @@ padding: 10px;
  
 
   #text-nav-bottom-snow {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     padding: 10px;
   }
   #text-bottom-snow	{
     padding: 0px 0px 30px 0px;
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
   #image-cover button {
     padding: 10px 30px 10px 30px;
@@ -408,7 +423,6 @@ padding: 10px;
     background:gray;
     color: white;
     border-radius: 100px;
-
   }
 
   
@@ -446,6 +460,7 @@ padding: 10px;
 .img-card{
   left: 20px;
 }
+
 
 .container-winter-jobs{
   view-timeline-name: --aparecer ;

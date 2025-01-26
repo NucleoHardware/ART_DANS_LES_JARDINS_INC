@@ -82,15 +82,14 @@ body {
     margin: 10px 0;  
   }
   #text-nav-bottom{
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     font-weight: bold;
 
   }
   #text-bottom{
-    font-size: 1.1rem;
+    font-size: 1.5rem;
   }
 
-  
   .nav-bottom button {
     margin-top: 20px;
     padding: 10px;
@@ -106,9 +105,9 @@ body {
   }
   
   .nav-bottom button:hover {
-    background-color: rgb(0, 166, 0);
+    background-color: white;
     border:solid 2px white;
-    color:white;
+    color:rgb(64, 64, 64);
   }
   
   .below-main-information {
@@ -440,7 +439,6 @@ padding: 10px;
   .nav{
     opacity: 0;
     visibility: hidden;
-
     display: flex;
     flex-direction: column;
     align-items: end;
@@ -462,6 +460,17 @@ padding: 10px;
     flex-direction: column;
     align-items: end;
   }
+
+  #text-nav-bottom{
+    font-size: 2.3rem;
+    padding: 10px;
+  }
+
+  #text-bottom{
+    padding: 0px 0px 10px 0px;
+    font-size: 1.5rem;
+  }
+
   .below-main-information {
     grid-template-columns: 1fr; 
     gap: 40px; 
@@ -545,14 +554,14 @@ padding: 10px;
     text-align: center;
     }
 
-  .spring-service,.winter-services,.informative-text,.image-content{
+  .below-main-information,.spring-service,.winter-services,.informative-text,.image-content{
     view-timeline-name: --aparecer ;
     view-timeline-axis: block;
   
     animation-timeline: --aparecer;
     animation-name: show;
   
-    animation-range: entry 25% cover 50%;
+    animation-range: entry 25% cover 30%;
     animation-fill-mode: both;
   }
 }
@@ -596,9 +605,14 @@ padding: 10px;
     text-align: center;
     padding: 15px; 
   }
-
+  #text-nav-bottom{
+    font-size: 2.5rem ;
+  }
+  #text-bottom{
+    font-size: 1.2rem;
+  }
   .nav-bottom p {
-    font-size: 0.9rem; 
+    font-size: 1.0rem; 
   }
 
   .nav-bottom button {
