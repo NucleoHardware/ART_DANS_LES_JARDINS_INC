@@ -104,6 +104,9 @@ p {
   animation-range: entry 25% cover 45%;
   animation-fill-mode: both;
 }
+.carrusel-list{
+  animation-range: entry 25% cover 25%;
+}
 .container-winter-jobs {
   padding: 20px;
   display: grid;
