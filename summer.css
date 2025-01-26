@@ -1,6 +1,4 @@
-body{
-    margin: 0px;
-}
+
 h2{
     font-family: lato;
     font-size: 3.5rem;
@@ -10,15 +8,68 @@ h2{
 p{
     font-family: lato;
     font-size: 1.5rem;
+}
 
+.image-cover {
+  background-image: url("images_webp/pngtree-trees-in-park-trees-in-summer-plants-in-park-area-picture-image_15556263.webp");
+  background-size: cover;  
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-attachment: fixed;
+  height: 92vh;
+  display: flex; 
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center; 
+  text-align: center; 
+  color: white; 
+  padding: 100px;
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+}
+
+.nav-bottom-summer p {
+  margin: 10px 0;  
+}
+#text-nav-bottom-summer{
+  font-size: 3.5rem;
+  font-weight: bold;
+
+}
+#text-bottom-summer{
+  font-size: 1.5rem;
+}
+
+
+.image-cover button {
+  margin-top: 20px;
+  padding: 10px 30px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  border: solid 2px #5c8a48; /* Verde bosque */
+  background: #7db972; /* Verde claro */
+  color: #ffffff; /* Blanco */
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.image-cover button:hover {
+  background: #5c8a48; 
+  transform: scale(1.05);
+}
+
+.image-cover button:active {
+  background: #3b5c2e;
 }
 .text-center{
     text-align: center;
 }
 .section-summer-jobs {
-padding:  50px 150px;
+  
+  padding:  80px 150px;
 }
 .div-summer-jobs {
+
   display: grid;
   grid-template-columns: repeat(3, minmax(300px, 1fr));
   gap: 20px;
@@ -37,25 +88,120 @@ padding:  50px 150px;
     grid-column: 2 / 4;
 }
 
-@media screen and (max-width: 768px){
+
+
+/*Animacion de apareción*/
+@keyframes show{
+  from{
+    opacity: 0;
+    scale: 25%;
+  }
+  to{
+    opacity: 1;
+    scale: 100%;
+  }
+}
+
+
+.text-center,.img-jobs{
+  view-timeline-name: --aparecer ;
+  view-timeline-axis: block;
+
+  animation-timeline: --aparecer;
+  animation-name: show;
+
+  animation-range: entry 25% cover 50%;
+  animation-fill-mode: both;
+}
+
+
+
+
+
+
+@media screen and (max-width:1024px) {
+  .image-cover{
+    height: 95vh;
+  }
+  .section-summer-jobs {
+    padding: 80px 30px; /* Reduce el padding en esta sección */
+  }
+
+  .div-summer-jobs {
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas medianas */
+    gap: 15px;
+  }
+
+  .img-jobs:first-child, 
+  .img-jobs:nth-child(4) {
+    grid-column: span 2; /* Ocupan dos columnas en pantallas medianas */
+  }
+
+}
+@media screen and (max-width: 850px){
+  #text-nav-bottom-summer{
+    font-size: 2.3rem;
+    padding: 10px;
+  
+  }
+  #text-bottom-summer{
+    padding: 0px 0px 10px 0px;
+    font-size: 1.5rem;
+  }
+
+
     .div-summer-jobs {
-        grid-template-columns: repeat(2, minmax(300px, 1fr));
-    }
-    .img-jobs:first-child {
-        grid-column: 1 / -1;
-    }
-    .img-jobs:nth-child(4) {
-        grid-column: 1 / -1;
-    }   
+        display: grid; /* Asegura que sea un grid */
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas iguales */
+        gap: 15px; /* Espacio entre elementos */
+        padding-left: 0;
+       
+      }
+    
+      .img-jobs {
+        width: 100%; /* Las imágenes ocuparán todo el ancho de su contenedor */
+        height: auto; /* Mantendrán su proporción */
+        object-fit: cover; /* Asegura que el contenido de las imágenes se ajuste correctamente */
+      }
+    
+      .img-jobs:first-child {
+        grid-column: span 2; /* Ocupará ambas columnas */
+      }
+    
+      .img-jobs:nth-child(4) {
+        grid-column: span 2; /* Ocupará ambas columnas */
+      }
+
 }
 @media screen and (max-width: 500px){
-    .section-summer-jobs {
-        padding:  50px 20px;
-    }
-    .div-summer-jobs {
-        grid-template-columns: 1fr;
-    }
-    .img-jobs {
-        height: 40vh;
-    }
+  #text-nav-bottom-summer {
+    font-size: 2.5rem;
+    padding: 10px;
+  }
+  #text-bottom-summer	{
+    padding: 0px 0px 30px 0px;
+    font-size: 1.2rem;
+  }
+  #summer-botton {
+    padding: 10px 30px 10px 30px;
+    font-size: 1rem; 
+  }
+
+  .section-summer-jobs {
+      padding:  80px 15px;
+  }
+  .div-summer-jobs {
+    display: grid ;
+      grid-template-columns: 1fr ;
+      gap: 10px;
+  }
+  .img-jobs {
+      display: block ;
+      width: 100%;
+      height: 40vh;
+      object-fit: cover;
+  }
+  .img-jobs:first-child, .img-jobs:nth-child(4) {
+    grid-column: span 1; /* Mantiene una sola columna para estas imágenes */
+  }
 }
