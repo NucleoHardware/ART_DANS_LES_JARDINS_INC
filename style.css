@@ -19,7 +19,11 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     height: 75px;
   }
-
+li a{
+display: flex;
+justify-content: center;
+align-items: center;
+}
   .abrir-menu,
   .cerrar-menu{
     display: none;
