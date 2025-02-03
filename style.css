@@ -71,7 +71,7 @@ body {
   
   /* Nav-bottom Styles */
   .nav-bottom {
-    background-image: url("img/jardin.png");
+    background-image: url("images_webp/jardin.webp");
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
