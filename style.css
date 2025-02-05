@@ -357,6 +357,10 @@ padding: 10px;
   align-items: center;
 }
 
+a{
+  text-decoration: none;
+}
+
 
 /*Animacion de apareción*/
 @keyframes show{
