@@ -1,15 +1,10 @@
 
 h2{
     font-family: lato;
-    font-size: 3.5rem;
+    font-size: rem;
     font-weight: bold;
     margin-bottom: 20px;
 }
-p{
-    font-family: lato;
-    font-size: 1.5rem;
-}
-
 .image-cover {
   background-image: url("images_webp/pngtree-trees-in-park-trees-in-summer-plants-in-park-area-picture-image_15556263.webp");
   background-size: cover;  
@@ -88,6 +83,76 @@ p{
     grid-column: 2 / 4;
 }
 
+.summer-jobs-information {
+  padding: 50px 30px;
+  margin-top: -20px;
+}
+
+.information-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.information-title h3 {
+  font-family: 'Lato', sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #5c8a48; /* Verde bosque */
+}
+
+/* Estilo para los divs individuales */
+.jobs {
+  display: flex;
+  flex-direction: column; /* Cada trabajo en su propia fila */
+  gap: 20px; /* Espaciado entre divs */
+  align-items: center; /* Centrar los divs en el contenedor */
+}
+
+.jobs div {
+  display: flex;
+  flex-direction: row; /* Imagen y texto en línea */
+  align-items: center;
+  justify-content: center; /* Centrar contenido dentro del div */
+  max-width: 1000px; /* Limitar el ancho total de cada div */
+  gap: 100px; /* Espaciado entre imagen y texto */
+  margin-bottom: 70px;
+}
+
+.jobs div img {
+  max-height: 400px;
+  width: 50%; /* Imagen ocupa el 30% del div */
+   /* Mantener proporción */
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.jobs div p {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.4rem;
+  color: #333333;
+  /* Texto ocupa el espacio restante */
+}
+
+.information {
+  display: flex ;
+  flex-direction: column !important; /* Apila el título y el texto */
+  align-items: start !important;
+  gap: 10px !important; /* Espacio entre el título y el texto */
+}
+
+.information .title {
+  font-size: 2rem !important; /* Ajusta el tamaño del título */
+  font-weight: bold; /* Hace que el título destaque */
+}
+
+/* Alternar diseño para pares e impares */
+.jobs div:nth-child(odd) {
+  flex-direction: row; /* Imagen a la izquierda, texto a la derecha */
+}
+
+.jobs div:nth-child(even) {
+  flex-direction: row-reverse; /* Imagen a la derecha, texto a la izquierda */
+}
 
 
 /*Animacion de apareción*/
@@ -103,14 +168,14 @@ p{
 }
 
 
-.text-center,.img-jobs{
+.text-center,.img-jobs,.information-title,.jobs-information-1,.jobs-information-2,.jobs-information-3,.jobs-information-4{
   view-timeline-name: --aparecer ;
   view-timeline-axis: block;
 
   animation-timeline: --aparecer;
   animation-name: show;
 
-  animation-range: entry 25% cover 50%;
+  animation-range: entry 25% cover 40%;
   animation-fill-mode: both;
 }
 
@@ -187,21 +252,34 @@ p{
     font-size: 1rem; 
   }
 
-  .section-summer-jobs {
-      padding:  80px 15px;
+.information-title h3 {
+    font-size: 1.5rem; /* Tamaño de fuente más pequeño */
   }
-  .div-summer-jobs {
-    display: grid ;
-      grid-template-columns: 1fr ;
-      gap: 10px;
+
+  .jobs div {
+    flex-direction: column; /* Cambiar a columna */
+    gap: 20px; /* Espacio entre imagen y texto */
+    margin-bottom: 40px; /* Reducir margen inferior */
   }
-  .img-jobs {
-      display: block ;
-      width: 100%;
-      height: 40vh;
-      object-fit: cover;
+
+  .jobs div img {
+    
+    max-width: 100%;/* La imagen no será más ancha que su contenedor */
+    max-height: 250px; /* Reducir altura máxima */
+    display: block;
+    margin: 0 auto;
   }
-  .img-jobs:first-child, .img-jobs:nth-child(4) {
-    grid-column: span 1; /* Mantiene una sola columna para estas imágenes */
+
+  .jobs div p {
+    font-size: 1.0rem; /* Tamaño de fuente más pequeño */
+  }
+
+  .information {
+    align-items: center; /* Centrar contenido */
+    text-align: center; /* Alinear texto al centro */
+  }
+
+  .information .title {
+    font-size: 1.5rem !important; /* Tamaño de fuente más pequeño */
   }
 }

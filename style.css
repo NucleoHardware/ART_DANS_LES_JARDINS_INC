@@ -7,11 +7,12 @@ body {
   
   .navbar {
     display: flex;
+    align-items: center;
     justify-content: space-between; 
-    align-items: center; 
+    
     background-color: #e7e8e7e0;
     color: black;
-    padding: 15px 20px; 
+    padding: 0 20px; 
     position: fixed; 
     top: 0;
     width: 100%; 
@@ -19,11 +20,11 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     height: 75px;
   }
-li a{
-display: flex;
-justify-content: center;
-align-items: center;
-}
+  li a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
   .abrir-menu,
   .cerrar-menu{
     display: none;
@@ -32,11 +33,15 @@ align-items: center;
   .navbar .logo {
     display: flex;
     align-items: center;
-
+    max-height: 100%;
+    justify-content: start;
   }
   
-  .navbar .logo img {
-    display: block;
+  .navbar .logo img { 
+   min-height: 100%;
+   height: 70px;
+   display: block;
+   object-fit: contain;
   }
   
   .navbar .nav-list {
@@ -66,12 +71,12 @@ align-items: center;
   
   /* Nav-bottom Styles */
   .nav-bottom {
-    background-image: url("img/jardin.png");
+    background-image: url("images_webp/jardin.webp");
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
     background-attachment: fixed;
-    height: 92vh;
+    height: 95vh !important;
     display: flex; 
     flex-direction: column;
     justify-content: center; 

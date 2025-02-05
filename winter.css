@@ -79,7 +79,6 @@ h1 {
 h2 {
   font-size: 20px;
   font-family: lato;
- 
   font-weight: 600;
   margin-bottom: 20px;
 }
@@ -94,7 +93,7 @@ p {
 
   
 }
-.div-winter, .container-winter-jobs,.section-winter, .container-winter, .carrusel-list{
+.container-winter-jobs,.carrusel-list,.section-winter,.winter-information{
   view-timeline-name: --aparecer ;
   view-timeline-axis: block;
 
@@ -105,7 +104,7 @@ p {
   animation-fill-mode: both;
 }
 .carrusel-list{
-  animation-range: entry 25% cover 25%;
+  animation-range: entry 25% cover 15%;
 }
 .container-winter-jobs {
   padding: 20px;
@@ -544,7 +543,7 @@ width: 270px;
   }
 
 
-  .container-winter-jobs{
+  .div-winter{
     view-timeline-name: --aparecer ;
     view-timeline-axis: block;
   
@@ -574,7 +573,7 @@ width: 270px;
   }
   #image-cover {
     padding: 50px 40px 0px 40px;
-    height: 90vh;
+    height: 95vh;
   }
  
 
@@ -667,14 +666,14 @@ width: 270px;
   font-size: 10px;
 }
 
-.container-winter-jobs{
+.div-winter{
   view-timeline-name: --aparecer ;
   view-timeline-axis: block;
 
   animation-timeline: --aparecer;
   animation-name: reveal;
 
-  animation-range: entry 25% cover 15%;
+  animation-range: entry 25% cover 20%;
   animation-fill-mode: both;
 }
 
