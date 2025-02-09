@@ -22,6 +22,10 @@
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
       rel="stylesheet"
     />
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
   </head>
   <body>
     <header class="navbar">
@@ -42,8 +46,18 @@
           </ul>
         </nav>
       </header>
-
+    <!-- background principal -->
     <section class="image-cover">
+      <div class="sun">
+        <div class="ray"></div>
+        <div class="ray"></div>
+        <div class="ray"></div>
+        <div class="ray"></div>
+        <div class="ray"></div>
+        <div class="ray"></div>
+        <div class="ray"></div>
+        <div class="ray"></div>
+    </div>
       <div class="img-summer"></div>
       <p id="text-nav-bottom-summer">Cuidado Del Césped De Calidad Superior</p>
       <p id="text-bottom-summer">
@@ -53,7 +67,7 @@
         ><button id="summer-botton">Explorar servicios</button></a
       >
     </section>
-
+     <!-- Trabajos de jardinera bento -->
     <section class="section-summer-jobs" id="section-summer-jobs">
       <h1 class="text-center">Trabajos de Jardinería</h1>
       <p class="text-center">
@@ -114,9 +128,53 @@
         </div>
       </div>
     </div>
-
+    <!-- carrusel promociones-->
+<section class="swiper-carrusel">
+  <h1 style="text-align: center;">Promociones</h1>
+  <div class="swiper mySwiper container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="swiper-txt">
+          <h3>Lorem impsum</h3>
+          <p>descrpcion</p>
+        </div>
+        <img src="/images_webp/promotion_1.webp" alt="" />
+      </div>
+      <div class="swiper-slide">
+        <div class="swiper-txt">
+          <h3>Lorem impsum</h3>
+          <p>descrpcion</p>
+        </div>
+        <img src="images/4.jpg" alt="" />
+      </div>
+      <div class="swiper-slide">
+        <div class="swiper-txt">
+          <h3>Lorem impsum</h3>
+          <p>descrpcion</p>
+        </div>
+        <img src="images/5.jpg" alt="" />
+      </div>
+      <div class="swiper-slide">
+        <div class="swiper-txt">
+          <h3>Lorem impsum</h3>
+          <p>descrpcion</p>
+        </div>
+        <img src="images/6.jpg" alt="" />
+      </div>
+      <div class="swiper-slide">
+        <div class="swiper-txt">
+          <h3>Lorem impsum</h3>
+          <p>descrpcion</p>
+        </div>
+        <img src="images/7.jpg" alt="" />
+      </div>
+    </div>
+  </div>
+</section>
+    <!-- comments -->
     <section class="comments">
-      <div class="cards-winter">
+      <h1 id="title-comments">Comentarios</h1>
+      <div class="cards-winter" id="cards-winter">
       <div class="card">
         <span class="card-content">
           <img class="img-card"
@@ -193,8 +251,9 @@
         </span>
         </form>
       </div>
+      <button id="load-more-comments" onclick="loadMoreComments()">Cargar más comentarios</button>
     </section>
-
+    <!-- footer -->
     <footer class="footer">
       <section>
         <span class="section-info-footer">
@@ -311,6 +370,7 @@
             <path
               d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"
             /></svg></a>
+            
 
         <a
           href="https://www.instagram.com/artdanslesjardins?igsh=cTFzN2hyNm0zbGx3"
@@ -349,6 +409,8 @@
       </section>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="main.js"></script>
+    <script src="summer.js"></script>
   </body>
 </html>

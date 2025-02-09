@@ -1,10 +1,16 @@
 
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden visible;
+}
 h2{
     font-family: lato;
     font-size: rem;
     font-weight: bold;
     margin-bottom: 20px;
 }
+
 .image-cover {
   background-image: url("images_webp/pngtree-trees-in-park-trees-in-summer-plants-in-park-area-picture-image_15556263.webp");
   background-size: cover;  
@@ -20,6 +26,46 @@ h2{
   color: white; 
   padding: 100px;
   box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+}
+.sun {
+  width: 300px;
+  height: 300px;
+  background-color: #ffe460;
+  border-radius: 50%;
+  position: absolute;
+  top: -100px; 
+  right: -100px; 
+  animation: rotateSun 5s linear infinite;
+  box-shadow: 0 0 50px 20px rgba(255, 255, 255, 0.8);
+}
+.ray {
+  position: absolute;
+  width: 200px; 
+  height: 200px;
+  background-color: #ffe460;
+  top: 50%;
+  left: 50%;
+  transform-origin: bottom center; 
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  box-shadow: 0 0 50px 10px rgba(255, 255, 255, 0.8);
+}
+
+.ray:nth-child(1) { transform: translate(-50%, -100%) rotate(0deg); }
+.ray:nth-child(2) { transform: translate(-50%, -100%) rotate(45deg); }
+.ray:nth-child(3) { transform: translate(-50%, -100%) rotate(90deg); }
+.ray:nth-child(4) { transform: translate(-50%, -100%) rotate(135deg); }
+.ray:nth-child(5) { transform: translate(-50%, -100%) rotate(180deg); }
+.ray:nth-child(6) { transform: translate(-50%, -100%) rotate(225deg); }
+.ray:nth-child(7) { transform: translate(-50%, -100%) rotate(270deg); }
+.ray:nth-child(8) { transform: translate(-50%, -100%) rotate(315deg); }
+
+@keyframes rotateSun {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
 }
 
 .nav-bottom-summer p {
@@ -178,9 +224,39 @@ h2{
   animation-range: entry 25% cover 40%;
   animation-fill-mode: both;
 }
+.container-a .extra{
+  display: none;
+}
+.container-a p{
+  display: inline;
+}
+.container-a input[type="checkbox"]{
+height: 2em;
+display: block;
+appearance: none;
+}
+.container-a label{
+  position: relative;
+  padding: 1em;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
 
+.container-a label::before{
+  content: 'Leer mas';
+}
 
+.container-a input[type="checkbox"]:checked ~ label::before {
+  content: 'Leer menos';
+}
 
+.container-a .dots:has(.container-a ~ input[type="checkbox"]:checked){
+display: none;
+}
+.container-a .extra:has(.container-a ~ input[type="checkbox"]:checked){
+  display: inline;
+  }
 
 
 
@@ -282,4 +358,59 @@ h2{
   .information .title {
     font-size: 1.5rem !important; /* Tamaño de fuente más pequeño */
   }
+}
+
+
+.container {
+  max-width: 1040px;
+  margin: 0 auto;
+}
+.swiper {
+  margin-top: 40px;
+}
+.swiper-slide {
+  margin-bottom: 50px;
+  background-color: white;
+  box-shadow: 0 30px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  height: 420px;
+  width: 295px;
+  position: relative;
+}
+.swiper-slide img {
+  width: 295px;
+  border-radius: 15px;
+  height: 420px;
+}
+.swiper-txt {
+  font-size: 0px;
+  position: absolute;
+  padding: 25px;
+}
+.swiper-txt h3 {
+  font-size: 0px;
+  margin-bottom: 5px;
+  color: #222222;
+}
+.desktop {
+  text-align: center;
+  z-index: 1;
+}
+.desktop img {
+  width: 800px;
+}
+@media (max-width: 991px) {
+  .swiper {
+    padding: 0 70px;
+  }
+  .swiper-slide img {
+    width: 100%;
+  }
+
+  .desktop {
+    padding: 30px;
+  }
+  .desktop img{
+width: 100%;  
+}
 }

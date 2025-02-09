@@ -1,5 +1,6 @@
 body {
   margin: 0px;
+  overflow: hidden visible;
 }
 .snowflake {
   position: absolute;
@@ -79,6 +80,7 @@ h1 {
 h2 {
   font-size: 20px;
   font-family: lato;
+ 
   font-weight: 600;
   margin-bottom: 20px;
 }
@@ -93,7 +95,7 @@ p {
 
   
 }
-.container-winter-jobs,.carrusel-list,.section-winter,.winter-information{
+.div-winter, .container-winter-jobs,.section-winter, .container-winter, .carrusel-list{
   view-timeline-name: --aparecer ;
   view-timeline-axis: block;
 
@@ -104,7 +106,7 @@ p {
   animation-fill-mode: both;
 }
 .carrusel-list{
-  animation-range: entry 25% cover 15%;
+  animation-range: entry 25% cover 25%;
 }
 .container-winter-jobs {
   padding: 20px;
@@ -145,105 +147,100 @@ p {
     height: auto;
       grid-column: 1 / -1;
   }
-  h4, h2, small, a{
-    margin: 0px;
-    padding: 0px;
-  } a {
-    text-decoration: none;
+  /* slider-carrusel */
+  .container {
+    max-width: 1040px;
+    margin: 0 auto;
   }
-  .carousel {
-    width: 100%;
-    margin: 0px 0px;
+  .swiper {
+    margin-top: 40px;
   }
-  .section-carousel{
-    padding: 20px 0px;
-  }
-  .carousel h2{
-    font-size: 45px;
-    line-height: 38px;
-    padding-bottom: 50px;
-    opacity: .9;
-    text-transform: uppercase;
-    font-weight: 600;
-    text-align: center;
-    color: black;
-  }
-  .carrusel-list{
-    position: relative;
-    display: flex;
-    align-items: center;
-    width: 56vw;
-    height: 270px;
-    padding: 0px 0px;
-    margin: 0px auto;
-    max-width: 90vw;
-    overflow: hidden;
-  }
-  .carrusel-track{
-    position: relative;
-    top: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    transition: .5s ease-in-out;
-  }
-  .carrusel{
-    position: relative;
-  width: 210px;
-  float: left;
-  box-sizing: border-box;
-  display: flex;
-  height: 100%;
-  }
-  .carrusel h4 {
-  position: absolute;
-  z-index: 1;
-  font-size: 22px;
-  line-height: 23px;
-  color: black;
-  padding: 15px;
-  }
-  .carrusel h4 small {
-   font-size: 15px;
-   display: block;
-  }
-  .carrusel a img{
-    object-fit: cover;
-    height: 230px;
-    width: 200px;
+  .swiper-slide {
+    margin-bottom: 50px;
+    background-color: white;
+    box-shadow: 0 30px 30px rgba(0, 0, 0, 0.2);
     border-radius: 15px;
-    box-shadow: 0 2px 5px 0px rgba(0, 0, 0, 0.5);
-  transition: .3s ease-in-out;
+    height: 420px;
+    width: 295px;
+    position: relative;
   }
-  .carrusel-arrow{
-    border-radius: 30px;
-    background-color: #b8c0cc;
+  .swiper-slide img {
+    width: 295px;
+    border-radius: 15px;
+    height: 420px;
+  }
+  .swiper-txt {
+    font-size: 0px;
     position: absolute;
-    z-index: 4;
-    width: 48px;
-    height: 48px;
-    text-align: center;
-    border: 0;
-    cursor: pointer;
+    padding: 25px;
   }
-  .carrusel-arrow:focus{
-    outline: 0;
+  .swiper-txt h3 {
+    font-size: 0px;
+    margin-bottom: 5px;
+    color: #222222;
   }
-  .carrusel-arrow svg{
-  width: 12px;
-  height: 100%;
-  color: rgba(0, 0, 0, 0.7);
+
+  @media (max-width: 991px) {
+    .swiper {
+      padding: 0 70px;
+    }
+    .swiper-slide img {
+      width: 100%;
+    }
   }
-  .carrusel-prev{
-    left: 0px;
+
+  /* carrusel servicios */
+  .carousel .container {
+    max-width: 800px;
   }
-  .carrusel-next{
-    right: 0px;
+  .carousel .swiper {
+    margin-top: 20px;
   }
-  
+  .carousel .swiper-slide {
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.2);
+    height: 200px;
+    width: 250px;
+  }
+  .carousel .swiper-slide img {
+    object-fit: cover;
+    width: 150px;
+    height: 210px;
+  }
+
+  /* carrusel Promociones */
+  .swiper-carrusel .container {
+    max-width: 1040px;
+  }
+  .swiper-carrusel .swiper {
+    margin-top: 40px;
+  }
+  .swiper-carrusel .swiper-slide {
+    box-shadow: 0 30px 30px rgba(0, 0, 0, 0.2);
+    height: 420px;
+    width: 295px;
+  }
+  .swiper-carrusel .swiper-slide img {
+    width: 295px;
+    height: 420px;
+  }
+
+  @media (max-width: 991px) {
+    .swiper-carrusel .swiper {
+      padding: 0 25px;
+    }
+    .swiper-carrusel .swiper-slide img {
+      width: 100%;
+    }
+  }
+
+/* comentarios */
 .comments{
   padding: 50px 0px 0px 0px;
   background-color: #b8c0cc5b;
+}
+#title-comments{
+  text-align: center;
+  padding: 10px 0px 70px 0px;
 }
 .cards-winter{
   padding: 0px 0px 50px 0px;
@@ -410,6 +407,8 @@ padding: 10px;
   justify-content: space-around;
   align-items: center;
 }
+
+
 @keyframes reveal {
  from{
     opacity: 0;
@@ -492,23 +491,9 @@ padding: 10px;
 .img-card{
   left: 20px;
 }
-.carousel {
-  width: 100%;
-  margin: 0px 0px;
+.carousel .swiper, .swiper-carrusel .swiper {
+  padding: 0 30px;
 }
-.section-carousel{
-  padding: 0px 0px;
-}
-.carrusel{
-width: 270px;
-}
-.carrusel-list{
-  width: 90vw;
-}
-.carrusel a img{
-  width: 250px;
-}
-
 .container-comments{
   padding: 40px 10px;
 }
@@ -542,7 +527,7 @@ width: 270px;
   }
 
 
-  .div-winter{
+  .container-winter-jobs{
     view-timeline-name: --aparecer ;
     view-timeline-axis: block;
   
@@ -572,7 +557,7 @@ width: 270px;
   }
   #image-cover {
     padding: 50px 40px 0px 40px;
-    height: 95vh;
+    height: 90vh;
   }
  
 
@@ -616,19 +601,8 @@ width: 270px;
   .container-winter{
     grid-template-columns: 1fr;
   }
-  .carousel {
-    width: 100%;
-    margin: 0px 0px;
-  }
-  .carrusel {
-    width: 275px;
-  }
-  .carrusel-list{
-  width: 100vw;
-  }
-  .carrusel a img{
-    width: 250px;
-    height: 170px;
+  .carousel .swiper, .swiper-carrusel .swiper {
+    padding: 0 20px;
   }
 
   .cards-winter{
@@ -665,14 +639,14 @@ width: 270px;
   font-size: 10px;
 }
 
-.div-winter{
+.container-winter-jobs{
   view-timeline-name: --aparecer ;
   view-timeline-axis: block;
 
   animation-timeline: --aparecer;
   animation-name: reveal;
 
-  animation-range: entry 25% cover 20%;
+  animation-range: entry 25% cover 15%;
   animation-fill-mode: both;
 }
 
